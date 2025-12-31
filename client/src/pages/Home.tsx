@@ -99,12 +99,16 @@ export default function Home() {
               Join thousands of community members helping each other. Whether you need help or want to earn money, GramSeba is for you.
             </p>
             <div className="flex justify-center gap-4">
-              <Button size="lg" variant="secondary" className="font-bold text-primary">
-                Join as Customer
-              </Button>
-              <Button size="lg" className="bg-transparent border-2 border-primary-foreground hover:bg-primary-foreground/10 text-primary-foreground">
-                Join as Worker
-              </Button>
+              <Link href="/register">
+                <Button size="lg" variant="secondary" className="font-bold text-primary">
+                  Join as Customer
+                </Button>
+              </Link>
+              <Link href="/register">
+                <Button size="lg" className="bg-transparent border-2 border-primary-foreground hover:bg-primary-foreground/10 text-primary-foreground">
+                  Join as Worker
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

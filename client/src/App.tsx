@@ -4,6 +4,8 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
+import Register from "@/pages/Register";
+import SignIn from "@/pages/SignIn";
 import JobPost from "@/pages/JobPost";
 import WorkerFeed from "@/pages/WorkerFeed";
 import Dashboard from "@/pages/Dashboard";
@@ -14,6 +16,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/register" component={Register} />
+      <Route path="/signin" component={SignIn} />
       <Route path="/post-job" component={JobPost} />
       <Route path="/jobs" component={WorkerFeed} />
       <Route path="/jobs/:id" component={JobDetails} />
