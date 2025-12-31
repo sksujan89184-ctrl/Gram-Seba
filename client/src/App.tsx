@@ -10,6 +10,8 @@ import JobPost from "@/pages/JobPost";
 import WorkerFeed from "@/pages/WorkerFeed";
 import Dashboard from "@/pages/Dashboard";
 import JobDetails from "@/pages/JobDetails";
+import BidManagement from "@/pages/BidManagement";
+import AdminSettings from "@/pages/AdminSettings";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -21,6 +23,8 @@ function Router() {
       <Route path="/post-job" component={JobPost} />
       <Route path="/jobs" component={WorkerFeed} />
       <Route path="/jobs/:id" component={JobDetails} />
+      <Route path="/bid-management" component={BidManagement} />
+      <Route path="/admin/settings" component={AdminSettings} />
       <Route path="/dashboard" component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
