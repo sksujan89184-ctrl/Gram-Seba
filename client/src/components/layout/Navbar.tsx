@@ -55,10 +55,16 @@ export default function Navbar() {
         {/* Auth / Mobile Menu Toggle */}
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-2">
-            <Button variant="ghost" size="sm" className="text-muted-foreground">Sign In</Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm">
-              Join Now
-            </Button>
+            <Link href="/signin">
+              <button className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Sign In
+              </button>
+            </Link>
+            <Link href="/register">
+              <button className="px-4 py-2 text-sm font-medium bg-primary hover:bg-primary/90 text-primary-foreground rounded-md shadow-sm transition-colors">
+                Join Now
+              </button>
+            </Link>
           </div>
 
           <button 
@@ -91,8 +97,12 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="pt-4 border-t flex flex-col gap-2">
-            <Button variant="outline" className="w-full justify-start">Sign In</Button>
-            <Button className="w-full justify-start bg-primary text-primary-foreground">Join Now</Button>
+            <Link href="/signin" onClick={() => setIsOpen(false)}>
+              <button className="w-full px-4 py-2 text-left border rounded-md hover:bg-muted transition-colors">Sign In</button>
+            </Link>
+            <Link href="/register" onClick={() => setIsOpen(false)}>
+              <button className="w-full px-4 py-2 text-left bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">Join Now</button>
+            </Link>
           </div>
         </div>
       )}
